@@ -1,6 +1,6 @@
 {
-  "name": "GAP Solver",
-  "short_name": "GAP Solver",
+  "name": "GAPJS Solver",
+  "short_name": "GAPJS Solver",
   "icons": [{
     "src": "/gap-solver/images/icons/android-icon-48x48.png",
       "sizes": "48x48",
