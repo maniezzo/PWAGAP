@@ -1,6 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=https://maniezzo.github.io/app/index.html" />
+   <title>GAPJS</title>
+   <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">   
+   <link rel="manifest" href="manifest.json">
+   <link href="GAPJS_files/GAPstyle.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script>
+      $( document ).ready(function() {
+         $("#outputText").val("");
+      });
+   </script>   
+   <script>
+   if ('serviceWorker' in navigator) {
+     navigator.serviceWorker.register('/gapjs/sw.js')
+     .then(function(registration) {
+       console.log('Registration successful, scope is:', registration.scope);
+     })
+     .catch(function(error) {
+       console.log('Service worker registration failed, error:', error);
+     });
+   }
+   </script>
 </head>
-<body></body>
+<body>
+   <div class="container-fluid">
+   <p class="row" style="text-align:center;color:#A14366;font-size:1.5em;">Javascript GAP solver</p>
+   <div>
+      <button button type="button" class="btn btn-default btn-block" style="background-color: #EAFACF;" onclick="readWithCORS();">Load remote</button> 
+   </div>
+   <div class="form-group">
+      <textarea class="form-control" rows="1" id="inputRemote">yagiura\gapa\gapa_0.json</textarea>
+   </div>    
+   <button type="button" class="btn btn-default btn-block" style="background-color: #EAFACF;" onclick="loadLocalFile();">Load local file</button> 
+   <div class="btn btn-default btn-file" style="border-color:#fff">
+      <input type="file" id="inputLocal" />
+   </div>
+   <button type="button" class="btn btn-default btn-block" style="background-color: #EAFACF;" onclick="solveConstruct();">Solve constructive
+   </button> 
+
+   <p style="text-align:center;font-size:1.5em;color:#A14366;line-height:6vmin;">Lagrangian matheuristics</p>
+   <button type="button" class="btn btn-default btn-block" style="background-color: #EAFACF;" onclick="startWorker({path:'lagrangian.js', func:'run_lagrCap'});">Lagrangian, capacities relaxed
+   </button> 
+   <button type="button" class="btn btn-default btn-block" style="background-color: #EAFACF;" onclick="startWorker({path:'lagrangian.js', func:'run_lagrAss'});">Lagrangian, assignments relaxed
+   </button> 
+   
+   <div class="well well-sm">Lagrangian parameters
+
+      <div class="input-group"> 
+        <span class="input-group-addon">Iterations</span>
+        <input type="number" value="10000" min="1" step="1" data-number-to-fixed="0" data-number-stepfactor="1" class="form-control currency" id="inputIter" />
+      </div>   
+
+      <div class="input-group"> 
+        <span class="input-group-addon">Alpha</span>
+        <input type="number" value="2.5" min="0.1" step="0.1" data-number-to-fixed="2" data-number-stepfactor="0.1" class="form-control currency" id="inputAlpha" />
+      </div>   
+
+      <div class="input-group"> 
+        <span class="input-group-addon">min alpha:</span>
+        <input type="number" value="0.001" min="0.001" step="0.001" data-number-to-fixed="3" data-number-stepfactor="0.001" class="form-control currency" id="inputMinAlpha" />
+      </div>   
+   </div>   <!-- fine well -->
+   <div class="form-group">
+      <textarea class="form-control" rows="5" id="outputText"></textarea>
+   </div>    
+   </div>
+<script src="parallel.js"></script>
+<script src="GAPJS_files/AAAglobalVar.js"></script>
+<script src="GAPJS_files/loadGap.min.js"></script>
+<!-- <script src="GAPJS_files/loadGap.js"></script> -->
+<script src="GAPJS_files/costruttiva.js"></script>
+<script src="GAPJS_files/localSearch.js"></script>
+<script src="GAPJS_files/knapsackDP.min.js"></script>
+<!-- These go with the worker
+<script src="GAPJS_files/lagrangian.js"></script>
+<script src="lagrgap.min.js"> </script>
+<script src="lagrgap_min1.js"> </script>
+-->
+</body>
+</html>

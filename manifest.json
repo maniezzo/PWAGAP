@@ -1,29 +1,98 @@
 {
-  "name": "GAPJS Solver",
-  "short_name": "GAPJS Solver",
-  "icons": [{
-    "src": "/gap-solver/images/icons/android-icon-48x48.png",
-      "sizes": "48x48",
-      "type": "image/png"
-    }, {
-      "src": "/gap-solver/images/icons/android-icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png"
-    }, {
-      "src": "/gap-solver/images/icons/android-icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    }, {
-      "src": "/gap-solver/images/icons/android-icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    }, {
-      "src": "/gap-solver/images/icons/android-icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }],
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#3E4EB8",
-  "theme_color": "#2F3BA2"
+    "name": "GAPJS",
+    "icons": [
+        {
+            "src": "/images/82d1c5c0-621b-249f-b3cf-3b8b65e9c99a.webPlatform.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/d5ec97a8-7f3c-f537-ac42-084838db0b32.webPlatform.png",
+            "sizes": "1240x600",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/9fc369a9-86cf-8c27-677d-8b2adce6af12.webPlatform.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/452f46b1-4547-2cda-a436-127d54d616e9.webPlatform.png",
+            "sizes": "88x88",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/125305a0-5a26-de60-d824-ef7879933249.webPlatform.png",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/f5059492-f8dc-dee2-05d4-1ed8532e1aa7.webPlatform.png",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/3732571e-56b3-e69d-bcd8-bd13c5f26c49.webPlatform.png",
+            "sizes": "620x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/785d0d73-9d6d-0950-aedb-7272e28d2965.webPlatform.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/fb218a2e-450f-542e-c209-3a9b75b8e223.webPlatform.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/efe8e55a-5537-847e-519c-d8848942d591.webPlatform.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/d91b8a7c-cc8b-eb07-8a54-962e59fa3345.webPlatform.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/8a3f3432-bbc0-b63e-4c7a-c3b3c7531b1e.webPlatform.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/e205a5f7-fe41-8406-5eef-ff2af8f9990e.webPlatform.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/a911bf0a-fb20-b8e9-584f-d0851090b375.webPlatform.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/9e9bd0f7-a63a-9f98-972e-3961f89d7d24.webPlatform.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/01a5e2d2-25be-4e8e-26cf-45d7d5fd69c3.webPlatform.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/ceb399cd-11b1-c661-0be2-aaa1b9b2edb7.webPlatform.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#FCFCFC",
+    "background_color": "#FCFCFC",
+    "start_url": "http://astarte.csr.unibo.it/gapjs/index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "lang": "",
+    "short_name": "GAPJS",
+    "description": "Javascript optimizer for for GAP"
 }
