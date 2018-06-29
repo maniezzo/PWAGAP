@@ -19,14 +19,25 @@
    <script>
    if ('serviceWorker' in navigator) {
      navigator.serviceWorker.register('/gapjs/sw.js')
-     .then(function(registration) {
-       console.log('Registration successful, scope is:', registration.scope);
+     .then(function(registration) 
+     {  console.log('Registration successful, scope is:', registration.scope);
      })
-     .catch(function(error) {
-       console.log('Service worker registration failed, error:', error);
+     .catch(function(error) 
+     {  console.log('Service worker registration failed, error:', error);
      });
-   }
-   </script>
+  }
+  </script>
+  <script src="parallel.js"></script>
+  <script src="scripts/AAAglobalVars.js"></script>
+  <script src="scripts/loadGap.js"></script>
+  <script src="scripts/constructive.js"></script>
+  <script src="scripts/localSearch.js"></script>
+  <script src="scripts/knapsackDP.js"></script>
+  <!-- These go with the worker
+  <script src="scripts/lagrangian.js"></script>
+  <script src="lagrgap.min.js"> </script>
+  <script src="lagrgap_min1.js"> </script>
+  -->
 </head>
 <body>
    <div class="container-fluid">
@@ -88,17 +99,5 @@
       <textarea class="form-control" rows="5" id="outputText"></textarea>
    </div>    
    </div>
-<script src="parallel.js"></script>
-<script src="scripts/AAAglobalVars.js"></script>
-<!-- <script src="scripts/loadGap.min.js"></script> -->
-<script src="scripts/loadGap.js"></script>
-<script src="scripts/constructive.js"></script>
-<script src="scripts/localSearch.js"></script>
-<script src="scripts/knapsackDP.js"></script>
-<!-- These go with the worker
-<script src="scripts/lagrangian.js"></script>
-<script src="lagrgap.min.js"> </script>
-<script src="lagrgap_min1.js"> </script>
--->
 </body>
 </html>

@@ -1,8 +1,3 @@
-/**
- * Created by ac on 2-6-17.
- */
-
-
 var workers = [];
 var scheduler = [];
 var n_cores = navigator.hardwareConcurrency;
@@ -28,8 +23,8 @@ function addWorker(task){
     // start message; sends all the parameter to the Web Worker
     workers[idx].postMessage({
         func: task.func,
-        maxiter: document.getElementById("inputIter").value,
-        alpha: document.getElementById("inputAlpha").value,
+        maxiter:  document.getElementById("inputIter").value,
+        alpha:    document.getElementById("inputAlpha").value,
         minalpha: document.getElementById("inputMinAlpha").value,
         gv: copyGlobalVars()
     });

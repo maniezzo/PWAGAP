@@ -22,6 +22,7 @@ if( 'function' === typeof importScripts) {
         jInstance = gv.jInstance;   // istanza in input
         EPS = 0.001;
 
+         postMessage({task: "start", complete: false, message: "[WW] " + JSON.stringify(input.data)+"\n"});
         console.log("[WW] " + JSON.stringify(input.data));
         switch (input.data.func) {
 
@@ -40,16 +41,12 @@ if( 'function' === typeof importScripts) {
                  break;
            default:
                  console.log("default:  ==>  NO task executed!");
-
         }
-
-
     };
 }
 
 function run_lagrCap()
 {
-
    if(maxiter < 0) maxiter = Number.MAX_VALUE;
    // Writes message into outText
    postMessage({task: "lagrCap", complete: false, message: "Starting relax capacities, n="+n+"\n"});

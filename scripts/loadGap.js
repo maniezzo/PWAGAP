@@ -4,7 +4,8 @@
 function readFromSite(file)
 {
    $.getJSON("data\\"+file, function(data) {
-      jInstance = JSON.parse(data);
+      //jInstance = JSON.parse(data);
+      jInstance = data;
       setInstance(jInstance);});
 }
 
