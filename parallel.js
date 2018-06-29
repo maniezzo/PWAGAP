@@ -1,8 +1,3 @@
-/**
- * Created by ac on 2-6-17.
- */
-
-
 var workers = [];
 var scheduler = [];
 var n_cores = navigator.hardwareConcurrency;
@@ -16,7 +11,7 @@ var n_cores = navigator.hardwareConcurrency;
 
 function addWorker(task){
     var idx = workers.length;
-    var path = "GAPJS_files/";
+    var path = "script/";
 
     console.log("[add] idx: " + idx + " task: "+ task.path);
 

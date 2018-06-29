@@ -62,8 +62,8 @@ function receivedText(e)
 
 function setInstance(jInstance)
 {
-   n = jInstance.numcustomers;   // num clienti
-   m = jInstance.numfacilities;  // num server
+   n = jInstance.numcli;   // num clienti
+   m = jInstance.numserv;  // num server
    c = jInstance.cost;   // matrice dei costi
    req = jInstance.req;  // matrice delle richieste
    cap = jInstance.cap;  // vattore delle capacitÃ 
