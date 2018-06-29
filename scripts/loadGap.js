@@ -1,6 +1,13 @@
 // window['readWithCORS']=readWithCORS;      // for minification
 // window['loadLocalFile']=loadLocalFile;    // for minification
 
+function readFromSite(file)
+{
+   $.getJSON("data\\"+file, function(data) {
+      jInstance = JSON.parse(data);
+      setInstance(jInstance);});
+}
+
 function readWithCORS()
 {  var resp;
    var req = new XMLHttpRequest();

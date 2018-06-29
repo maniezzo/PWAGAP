@@ -21,13 +21,12 @@ body{
    font-size: 3.5vmin;
    line-height: 4vmin;
    background-color: #F2F2C7;
-	/*background-image: url('pippo.png');*/
    display: table-cell;
    vertical-align: middle;
 }
 
 .tableline{
-   height:6.0vmin;
+   height:4.0vmin;
 }
 
 
@@ -48,6 +47,6 @@ input{
 textarea{
    width:100%;
    height: 24vmin;
-   font-size: 3vmin;
+   font-size: 3.5vmin;
 }
    

@@ -29,7 +29,7 @@ function addWorker(task){
         gv: copyGlobalVars()
     });
 
-    console.log("[wlen]" + workers.length);
+    console.log("[addworker: wlen] " + workers.length);
 
     // on message from the web worker
     workers[idx].onmessage = function(event) {
