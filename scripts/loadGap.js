@@ -7,8 +7,7 @@ function readWithCORS()
    inText = document.getElementById("inputRemote").value;
    if ('withCredentials' in req) 
    {  
-      // req.open('GET', 'http://astarte.csr.unibo.it/gapdata/'+inText, true);
-      req.open('GET', 'https://shobiru.github.io/gap-solver/data/'+inText, true);
+      req.open('GET', 'http://astarte.csr.unibo.it/gapdata/'+inText, true);
       req.onreadystatechange = function() 
       {
         if (req.readyState === 4) 

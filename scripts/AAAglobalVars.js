@@ -6,7 +6,7 @@ var n;   // num clienti
 var m;   // num server
 var c;   // matrice dei costi
 var req; // matrice delle richieste
-var cap; // vattore delle capacitÃ 
+var cap; // vattore delle capacita'
 var sol; // vettore soluzione
 var solbest; // vettore migliore soluzione trovata
 var startTime, endTime, timeDiff; // tempi esecuzione
