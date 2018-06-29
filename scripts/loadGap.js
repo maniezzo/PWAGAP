@@ -66,8 +66,8 @@ function setInstance(jInstance)
    m = jInstance.numserv;  // num server
    c = jInstance.cost;   // matrice dei costi
    req = jInstance.req;  // matrice delle richieste
-   cap = jInstance.cap;  // vattore delle capacitÃ 
-   alert("Got instance "+jInstance.name+" n="+n);
+   cap = jInstance.cap;  // vattore delle capacita'
+   document.getElementById("outputText").value = "Got instance "+jInstance.name+" n="+n;
 }
 
 function checkSol(sol)

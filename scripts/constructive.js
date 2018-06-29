@@ -36,8 +36,8 @@ function solveConstruct()
    }
    
    var zcheck = checkSol(sol);
-   document.getElementById("outputText").innerHTML = "Costo "+z+" zcheck "+zcheck;
-   console.log("Costo "+z+" zcheck "+zcheck+" sol "+sol);
+   document.getElementById("outputText").value += "\r\nCost "+z+" zcheck "+zcheck;
+   console.log("Cost "+z+" zcheck "+zcheck+" sol "+sol);
    zub = z;
    console.log("Constructive, zub="+zub);
    console.log(sol);
