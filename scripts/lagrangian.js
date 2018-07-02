@@ -22,8 +22,8 @@ if( 'function' === typeof importScripts) {
         jInstance = gv.jInstance;   // istanza in input
         EPS = 0.001;
 
-         postMessage({task: "start", complete: false, message: "[WW] " + JSON.stringify(input.data)+"\n"});
-        console.log("[WW] " + JSON.stringify(input.data));
+        postMessage({task: "start", complete: false, message: "\n[WW] n=" + n +"\n"});
+        console.log("[WW] " + JSON.stringify(input.data)+"\n");
         switch (input.data.func) {
 
            case "run_lagrAss":
@@ -49,7 +49,7 @@ function run_lagrCap()
 {
    if(maxiter < 0) maxiter = Number.MAX_VALUE;
    // Writes message into outText
-   postMessage({task: "lagrCap", complete: false, message: "Starting relax capacities, n="+n+"\n"});
+   postMessage({task: "lagrCap", complete: false, message: "Starting to relax capacities, n="+n+"\n"});
    startTime = new Date();
    var z     = lagrNoCap(maxiter,alpha,minalpha);
    endTime   = new Date();
@@ -57,7 +57,7 @@ function run_lagrCap()
    console.log("LagrCap, optimization OK");
    console.log("LagrCap, zlb= "+zlbBest+" zub= "+zub+" t.cpu "+timeDiff+" ms");
    // Writes message into outText
-   postMessage({task: "lagrCap", complete: false, message: "LagrCap, zlb= "+zlbBest+" zub= "+zub+" t.cpu "+timeDiff+" ms"});
+   postMessage({task: "lagrCap", complete: false, message: "LagrCap, zlb= "+zlbBest+" zub= "+zub+" t.cpu "+timeDiff+" ms"+"\n"});
    zlbBest = zub = Number.MAX_VALUE;
    solbest = sol = null;
 }
@@ -66,7 +66,7 @@ function run_lagrAss()
 {
    if(maxiter < 0) maxiter = Number.MAX_VALUE;
    // Writes message into outText
-   postMessage({task: "lagrAss", complete: false, message: "Starting relaxed assignments, n="+n+"\n"});
+   postMessage({task: "lagrAss", complete: false, message: "Starting to relax assignments, n="+n+"\n"});
    startTime = new Date();
    var z     = lagrNoAss(maxiter,alpha,minalpha);
    endTime   = new Date();
@@ -74,7 +74,7 @@ function run_lagrAss()
    console.log("LagrAss, optimization OK");
    console.log("LagrAss, zlb= "+zlbBest+" zub= "+zub+" t.cpu "+timeDiff+" ms");
    // Writes message into outText
-   postMessage({task: "lagrAss", complete: false, message: "LagrAss, zlb= "+zlbBest+" zub= "+zub+" t.cpu "+timeDiff+" ms"});
+   postMessage({task: "lagrAss", complete: false, message: "LagrAss, zlb= "+zlbBest+" zub= "+zub+" t.cpu "+timeDiff+" ms"+"\n"});
    zlbBest = zub = Number.MAX_VALUE;
    solbest = sol = null;
 }
