@@ -1,12 +1,12 @@
 {
-  "name": "gap-solver",
-  "version": "1.0.0",
-  "description": "An HTML5 and JS web application to solve GAP problems with Lagrangian euristics.",
+  "name": "PWAGAP",
+  "version": "1.0.1",
+  "description": "An HTML5 and JS web application to solve GAP problems with Lagrangian matheuristics.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shobiru/gap-solver.git"
+    "url": "git+https://github.com/maniezzo/PWAGAP"
   },
-  "author": "Christian Manfredi",
+  "author": "Vittorio Maniezzo",
   "devDependencies": {
     "gulp": "^3.9.1",
     "sw-precache": "^5.2.0"

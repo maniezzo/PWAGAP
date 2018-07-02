@@ -89,10 +89,10 @@
     ],
     "theme_color": "#FCFCFC",
     "background_color": "#FCFCFC",
-    "start_url": "http://astarte.csr.unibo.it/gapjs/index.html",
+    "start_url": "https://maniezzo.github.io/PWAGAP/",
     "display": "standalone",
     "orientation": "portrait",
     "lang": "",
     "short_name": "GAPJS",
-    "description": "Javascript optimizer for for GAP"
+    "description": "Javascript optimizer for for the GAP"
 }
