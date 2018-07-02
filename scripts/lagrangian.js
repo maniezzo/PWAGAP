@@ -57,7 +57,7 @@ function run_lagrCap()
    console.log("LagrCap, optimization OK");
    console.log("LagrCap, zlb= "+zlbBest+" zub= "+zub+" t.cpu "+timeDiff+" ms");
    // Writes message into outText
-   postMessage({task: "lagrCap", complete: false, message: "LagrCap, zlb= "+zlbBest+" zub= "+zub+" t.cpu "+timeDiff+" ms"+"\n"});
+   postMessage({task: "lagrCap", complete: false, message: "zlb= "+zlbBest.toFixed(2)+" zub= "+zub+"\nt.cpu "+timeDiff+" ms"+"\n"});
    zlbBest = zub = Number.MAX_VALUE;
    solbest = sol = null;
 }
@@ -74,7 +74,7 @@ function run_lagrAss()
    console.log("LagrAss, optimization OK");
    console.log("LagrAss, zlb= "+zlbBest+" zub= "+zub+" t.cpu "+timeDiff+" ms");
    // Writes message into outText
-   postMessage({task: "lagrAss", complete: false, message: "LagrAss, zlb= "+zlbBest+" zub= "+zub+" t.cpu "+timeDiff+" ms"+"\n"});
+   postMessage({task: "lagrAss", complete: false, message: "Lzlb= "+zlbBest.toFixed(2)+" zub= "+zub+"\nt.cpu "+timeDiff+" ms"+"\n"});
    zlbBest = zub = Number.MAX_VALUE;
    solbest = sol = null;
 }
