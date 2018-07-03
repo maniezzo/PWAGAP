@@ -39,7 +39,7 @@ function solveConstruct()
    timeDiff  = endTime - startTime; // time difference in ms
    
    var zcheck = checkSol(sol);
-   document.getElementById("outputText").value += "\r\nCost "+z+" zcheck "+zcheck+" t.cpu (ms)="+timeDiff;
+   document.getElementById("outputText").value = "Cost "+z+" zcheck "+zcheck+" t.cpu (ms)="+timeDiff;
    console.log("Cost "+z+" zcheck "+zcheck+" sol "+sol);
    zub = z;
    console.log("Constructive, zub="+zub+" t.cpu (ms) ="+timeDiff);

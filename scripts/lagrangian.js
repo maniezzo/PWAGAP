@@ -49,7 +49,7 @@ function run_lagrCap()
 {
    if(maxiter < 0) maxiter = Number.MAX_VALUE;
    // Writes message into outText
-   postMessage({task: "lagrCap", complete: false, message: "Starting to relax capacities, n="+n+"\n"});
+   postMessage({task: "lagrCap", complete: false, message: "Starting to relax capacities\n"});
    startTime = new Date();
    var z     = lagrNoCap(maxiter,alpha,minalpha);
    endTime   = new Date();
@@ -66,7 +66,7 @@ function run_lagrAss()
 {
    if(maxiter < 0) maxiter = Number.MAX_VALUE;
    // Writes message into outText
-   postMessage({task: "lagrAss", complete: false, message: "Starting to relax assignments, n="+n+"\n"});
+   postMessage({task: "lagrAss", complete: false, message: "Starting to relax assignments\n"});
    startTime = new Date();
    var z     = lagrNoAss(maxiter,alpha,minalpha);
    endTime   = new Date();
