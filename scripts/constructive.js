@@ -5,6 +5,7 @@ function solveConstruct()
    var i,j,ii;
    var z = 0;
 
+   startTime = new Date();
    var capLeft = cap.slice();
    
    sol = new Array(n);
@@ -34,12 +35,14 @@ function solveConstruct()
          ii++;
       }
    }
+   endTime   = new Date();
+   timeDiff  = endTime - startTime; // time difference in ms
    
    var zcheck = checkSol(sol);
-   document.getElementById("outputText").value += "\r\nCost "+z+" zcheck "+zcheck;
+   document.getElementById("outputText").value += "\r\nCost "+z+" zcheck "+zcheck+" t.cpu (ms)="+timeDiff;
    console.log("Cost "+z+" zcheck "+zcheck+" sol "+sol);
    zub = z;
-   console.log("Constructive, zub="+zub);
+   console.log("Constructive, zub="+zub+" t.cpu (ms) ="+timeDiff);
    console.log(sol);
 }
 

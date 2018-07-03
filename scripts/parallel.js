@@ -36,18 +36,19 @@ function addWorker(task){
         console.log("from: " + event.data.task + " complete: " + event.data.complete);
 
         // if message is not the final one
-        if(event.data.complete === false){
-            console.log("## outputText: " + event.data.message);
+        if(event.data.complete === false)
+        {   console.log("## outputText: " + event.data.message);
             document.getElementById("outputText").value += '['+event.data.task+']' + event.data.message;
             return;
         }
 
+        showPage();
         workers[idx] = undefined;
         console.log(event.data);
 
-        // when task has been complete start a new worker if there is any task left
-        if(event.data.result !== undefined) {
-            if (scheduler.length > 0) {
+        // when task has been completed start a new worker if there is any task left
+        if(event.data.result !== undefined) 
+        {   if (scheduler.length > 0) {
                 var task = scheduler.pop();
                 addWorker(task);
             }
@@ -72,10 +73,12 @@ function startWorker(param) {
 
     console.log(param);
     scheduler.push(param);
+    document.getElementById("outputText").value = "";
 
     if(typeof(Worker) !== "undefined") {
         if(workers.length < n_cores){
             var task = scheduler.pop();
+            showLoader();
             // a new web worker is created here
             addWorker(task);
         }

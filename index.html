@@ -39,8 +39,10 @@
   <script src="lagrgap_min1.js"> </script>
   -->
 </head>
-<body>
-   <div class="container-fluid">
+<body onload="showPage()" style="margin:0;">
+   <div id="loader"></div>
+
+   <div class="container-fluid" id="thePage">
    <p style="text-align:center;color:#A14366;font-size:1.5em;">Javascript GAP solver</p>
 
    <div class="dropdown">
@@ -99,5 +101,16 @@
       <textarea class="form-control" rows="5" id="outputText"></textarea>
    </div>    
    </div>
-</body>
+
+   <script>
+      function showLoader() 
+      {  document.getElementById("loader").style.display = "block";
+         document.getElementById("thePage").style.display = "none";
+      }
+      
+      function showPage() 
+      {  document.getElementById("loader").style.display = "none";
+         document.getElementById("thePage").style.display = "block";
+      }
+      </script></body>
 </html>
